@@ -36,8 +36,10 @@ public class LinkedList {
         }
 
     }
-    public void addFirst(){
-        
+    public void addFirst(int v){
+        Node newNode = new Node(v);
+        head = newNode;
+
     }
 
     public void display(){
