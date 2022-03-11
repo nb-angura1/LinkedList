@@ -20,7 +20,9 @@ class Main {
         myList.display();
         System.out.println("New list");
         myList.addItem(72);
-        myList.addFirst(42);
+        myList.addFirst(423);
+        myList.addIndexed(2,200);
+        myList.clear();
         myList.display();
         System.out.println("The list size is " + myList.size());
     /*myList.head.display();

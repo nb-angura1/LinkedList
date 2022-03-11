@@ -37,10 +37,33 @@ public class LinkedList {
 
     }
     public void addFirst(int v){
+        Node current = head;
         Node newNode = new Node(v);
+        newNode.setNext(current);
         head = newNode;
-
     }
+    public void addIndexed(int index, int n){
+        Node current = head;
+        Node previous = null;
+        int counter = 0;
+        while(current!=null){
+
+            if(counter == index){
+                Node newValue = new Node(n);
+                previous.setNext(newValue);
+                newValue.setNext(current);
+                break;
+                }
+            counter = counter +1;
+            previous = current;
+            current = current.getNext();
+            }
+
+        }
+    public void clear(){
+        Node current = head;
+        head.setNext(null);
+        }
 
     public void display(){
         Node current = head;
@@ -58,6 +81,7 @@ public class LinkedList {
                 previous = current;
                 current = current.getNext();
                 counter++;
+                //increment counter for each time it goes through a node
             }
 
         return counter;
