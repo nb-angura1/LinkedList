@@ -59,7 +59,34 @@ public class LinkedList {
             current = current.getNext();
             }
 
-        }
+    }public int getFirst(){
+        Node value = head;
+        return value.getValue();
+    }
+    public int getLast() {
+        Node current = head;
+        Node previous = null;
+        do {
+            previous = current;
+            current = current.getNext();
+        } while (current.getNext() != null);
+        return current.getValue();
+    }
+    public int getIndexed(int index){
+        Node current = head;
+        Node previous = null;
+        int counter = 0;
+        do{
+            previous = current;
+            current = current.getNext();
+            counter++;
+        }while (counter != index-1);
+        return current.getValue();
+
+    }
+    public void set(int index, int n){
+
+    }
     public void clear(){
         Node current = head;
         head.setNext(null);

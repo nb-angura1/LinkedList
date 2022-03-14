@@ -14,22 +14,22 @@ class Main {
         n3.display();
 
         // create a linked list
-        int[] data = {1,1,2,4,7,6,7,8,4,8};
+        int[] data = {156,1,2,4,7,6,7,8,4,64};
         LinkedList myList = new LinkedList(data);
         System.out.println("Original list");
         myList.display();
-        System.out.println("New list");
+        int lastNum = myList.getLast();
+        System.out.println("the last number is " + lastNum);
+        int number = myList.getIndexed(4);
+        System.out.println("Indexed number is " + number);
+        /*System.out.println("New list");
+
         myList.addItem(72);
         myList.addFirst(423);
         myList.addIndexed(2,200);
         myList.clear();
         myList.display();
-        System.out.println("The list size is " + myList.size());
-    /*myList.head.display();
-    myList.head.getNext().display();
-    myList.head.getNext().getNext().display();
-    myList.head.getNext().getNext().getNext().display();
-    myList.head.getNext().getNext().getNext().getNext().display(); */
+        System.out.println("The list size is " + myList.size());*/
     }
 }
 
