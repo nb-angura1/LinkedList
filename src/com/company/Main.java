@@ -17,11 +17,16 @@ class Main {
         int[] data = {156,1,2,4,7,6,7,8,4,64};
         LinkedList myList = new LinkedList(data);
         System.out.println("Original list");
+        myList.set(3,69);
         myList.display();
         int lastNum = myList.getLast();
         System.out.println("the last number is " + lastNum);
         int number = myList.getIndexed(4);
         System.out.println("Indexed number is " + number);
+        boolean contains = myList.contains(2);
+        System.out.println("True or false=" + contains);
+        int indexOf = myList.indexOf(69);
+        System.out.println("Index of number is " + indexOf);
         /*System.out.println("New list");
 
         myList.addItem(72);

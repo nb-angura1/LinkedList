@@ -54,7 +54,7 @@ public class LinkedList {
                 newValue.setNext(current);
                 break;
                 }
-            counter = counter +1;
+            counter++;
             previous = current;
             current = current.getNext();
             }
@@ -85,7 +85,15 @@ public class LinkedList {
 
     }
     public void set(int index, int n){
-
+        Node current = head;
+        Node previous = null;
+        int counter = 0;
+        do{
+            previous = current;
+            current = current.getNext();
+            counter++;
+        }while (counter != index-1);
+        current.setValue(n);
     }
     public void clear(){
         Node current = head;
@@ -113,7 +121,32 @@ public class LinkedList {
 
         return counter;
         }
+        public boolean contains(int n){
+            Node current = head;
+            Node previous = null;
+            while (current != null) {
+                if(current.getValue() == n){
+                    return true;
+                }
+                current = current.getNext();
+            }
+            return false;
+        }
+        public int indexOf(int n){
+            Node current = head;
+            Node previous = null;
+            int counter = 0;
+            while (current != null) {
+                if(current.getValue() == n){
+                    return counter+1;
+                }
+                current = current.getNext();
+                counter++;
+            }
+            return -1;
+        }
+        }
 
-    }
+
 
 
