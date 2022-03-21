@@ -27,7 +27,16 @@ class Main {
         System.out.println("True or false=" + contains);
         int indexOf = myList.indexOf(69);
         System.out.println("Index of number is " + indexOf);
+
+        System.out.println("..............................................");
+        Stack s = new Stack();
+        s.push(3);
+        s.push(34);
+        s.push(89);
+        System.out.println(s.pop());
+        System.out.println(s.pop());
         /*System.out.println("New list");
+
 
         myList.addItem(72);
         myList.addFirst(423);

@@ -99,7 +99,25 @@ public class LinkedList {
         Node current = head;
         head.setNext(null);
         }
-
+    public void remove(){
+        Node currentHead = head;
+        Node secondNode = currentHead.getNext();
+        head = secondNode;
+    }
+    public void remove(int index){
+        Node current = head;
+        Node previous = null;
+        int counter = 0;
+        while (current != null) {
+            if(counter == index){
+                previous.setNext(current.getNext());
+                break;
+            }
+            previous = current;
+            current = current.getNext();
+            counter++;
+        }
+    }
     public void display(){
         Node current = head;
         while(current!=null){
