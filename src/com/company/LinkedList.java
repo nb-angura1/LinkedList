@@ -20,7 +20,7 @@ public class LinkedList {
     }
 
 
-    public void addItem(int v) {
+    public void addItem(int v) { //adds v to the end of the list
         Node n = new Node(v);
         if (head == null) {
             head = n;

@@ -36,6 +36,13 @@ class Main {
         System.out.println(s.pop());
         System.out.println(s.pop());
         System.out.println(s.peek());
+        System.out.println("...............................................");
+        Queue q = new Queue();
+        q.enqueue(9);
+        q.enqueue(7);
+        q.enqueue(3);
+        System.out.println(q.dequeue());
+        System.out.println(q.size());
         /*System.out.println("New list");
 
 
