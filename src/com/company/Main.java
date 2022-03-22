@@ -35,6 +35,7 @@ class Main {
         s.push(89);
         System.out.println(s.pop());
         System.out.println(s.pop());
+        System.out.println(s.peek());
         /*System.out.println("New list");
 
 

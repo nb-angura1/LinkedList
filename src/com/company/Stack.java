@@ -1,33 +1,26 @@
 package com.company;
-
+//LAST IN, FIRST OUT ----LIFO
 public class Stack extends LinkedList{
-    static final int max = 1000;
-    int top;
-    int a[] = new int[max];
     public Stack(){
         super();
-        top = 0;
     }
     public void push(int n) {//Adds a value to the top of the stack
-        addItem(n);
-        top++;
+        addFirst(n);
     }
-    public int pop() {
-        if (top < 0) {
-            System.out.println("Stack Underflow - there isn't anything in the stack");
-            return 0;
-        }
-        else {
-            int x = a[top--];
-            return x;
-        }
+    public boolean pop() {
+     try{
+         int value = head.getValue();
+         head = head.getNext();
+         return true;
+     }catch(Exception e){
+         return false;
+     }
     }
 
     public int peek(){
-        return 0;
+        return head.getValue();
     }
     public boolean isEmpty(){
-        return false;
+        return !pop();
     }
-
 }
